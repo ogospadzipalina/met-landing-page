@@ -1,0 +1,28 @@
+.links {
+  padding-top: 15px;
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    color: $main-text-white;
+    font-family: $main-font-family;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-bottom: 1px solid transparent;
+    padding-bottom: 8px;
+    display: inline-block;
+    width: max-content;
+    transition: border-bottom 0.3s ease;
+
+    &:hover {
+      border-bottom: 1px solid $main-text-white;
+      cursor: pointer;
+    }
+  }
+}

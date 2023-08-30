@@ -1,0 +1,27 @@
+
+.phone {
+  &__container {
+    position: relative;
+  }
+
+  &__label {
+    color: $main-text-white;
+    font-size: 16px;
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    text-transform: uppercase;
+    position: absolute;
+    width: 220px;
+    transform: translateX(calc(-100% - 20px));
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover .phone__label {
+    opacity: 1;
+    visibility: visible;
+  }
+}

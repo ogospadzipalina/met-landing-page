@@ -1,0 +1,35 @@
+@import "../utils/mixins";
+
+.header {
+  background-color: $main-text-black;
+  background-image: url("./images/header-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 100px;
+
+  @include for-desktop() {
+    display: grid;
+    grid-template-columns: repeat(12, 63px);
+    grid-template-rows: 198px 1fr;
+    gap: 0 24px;
+    grid-template-areas: "nav nav nav nav nav nav nav nav nav nav nav nav"
+      "title title title title title title title title title title title title";
+    justify-content: center;
+
+    &__navigation {
+      grid-area: nav;
+      align-self: self-start;
+    }
+
+    &__title {
+      grid-area: title;
+    }
+  }
+}

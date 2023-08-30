@@ -1,0 +1,83 @@
+.plan {
+  padding: 100px 20px;
+
+  color: $main-text-black;
+  font-family: $main-font-family;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 27px;
+  font-weight: 700;
+
+  @include for-tablet() {
+    margin: 0 72px;
+    @include grid-tablet();
+
+    &__paragraf {
+      grid-column: 1 / 2;
+    }
+
+    &__title {
+      grid-column: 1 / 2;
+    }
+
+    &__name,
+    &__hours,
+    &__closed {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__paragraf {
+    color: $main-text-red;
+    font-size: 12px;
+    line-height: 140%;
+  }
+
+  &__hours {
+    display: grid;
+    grid-template-columns: 96px 155px;
+    grid-template-rows: repeat(3, 27px);
+    gap: 8px 24px;
+    width: calc(155px + 96px + 24px);
+
+    padding-top: 16px;
+
+    &--2 {
+      grid-template-rows: repeat(2, 27px);
+      grid-template-columns: 121px 77px;
+    }
+
+    &__day {
+      display: inline;
+      font-weight: 400;
+    }
+  }
+
+  &__closed {
+    padding-top: 16px;
+
+    &__date {
+      font-weight: 400;
+    }
+  }
+
+  @include for-desktop() {
+    @include grid();
+    gap: 0 24px;
+    grid-column: 1 / 12;
+
+    &__paragraf {
+      grid-column: 1 / 6;
+    }
+
+    &__title {
+      grid-column: 1 / 6;
+    }
+
+    &__name,
+    &__hours,
+    &__closed {
+      grid-column: 6 / 12;
+    }
+  }
+}

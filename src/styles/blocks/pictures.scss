@@ -1,0 +1,68 @@
+.pictures {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+
+  @include for-desktop() {
+    @include grid();
+  }
+
+  @include for-tablet() {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &--3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+
+    @include for-desktop() {
+      gap: 20px;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include for-desktop() {
+      grid-column: span 4;
+      height: 320px;
+
+      &--big {
+        grid-column: span 8;
+      }
+
+      &--small {
+        grid-column: span 4;
+      }
+    }
+
+    @include for-tablet() {
+      &--big {
+        grid-column: span 2;
+      }
+
+      &--small {
+        grid-column: span 1;
+      }
+    }
+
+    &--position {
+      object-position: 20%;
+    }
+
+    &--position--2 {
+      object-position: 90%;
+    }
+  }
+}

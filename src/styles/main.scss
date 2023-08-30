@@ -1,7 +1,29 @@
-@import "utils";
-@import "fonts";
-@import "typography";
 
-body {
-  background: $c-gray;
+@import "./utils/reset";
+@import "./utils/mixins";
+@import "./utils/vars";
+@import "./blocks/title.scss";
+@import "./blocks/header.scss";
+@import "./blocks/plan.scss";
+@import "./blocks/exhibition.scss";
+@import "./blocks/section.scss";
+@import "./blocks/pictures.scss";
+@import "./blocks/explore.scss";
+@import "./blocks/address.scss";
+@import "./blocks/form.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/links.scss";
+@import "./blocks/online.scss";
+@import "./blocks/contact.scss";
+@import "./blocks/burger.scss";
+@import "./blocks/phone.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }

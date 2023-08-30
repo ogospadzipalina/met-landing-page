@@ -1,0 +1,20 @@
+.address {
+  text-align: left;
+
+  &__name {
+    color: $main-text-black;
+    font-family: $main-font-family;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  &__content {
+    color: #3e3e3e;
+    font-family: $main-font-family;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
